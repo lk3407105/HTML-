@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            .box {
+                 width: 200px;
+                 height: 200px;
+                 border: 1px solid #cdcdcd;
+                 position: relative;
+            }
+            span {
+                width: 50px;
+                height: 50px;
+                background: yellow;
+                position: absolute;
+                right: -20px;
+                top: 0;
+            }
+            ul {
+                width: 150px;
+                height: 150px;
+                background: red;
+                margin: 0 0 0 50px;
+                padding: 0;
+                float: left;
+                display: inline;
+            }
+            /*
+                当浮动元素和绝对定位元素是并列关系的时候绝对定位元素会消失掉
+                解决方法：
+                    给定位元素外面包裹div
+                
+            */
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <ul></ul>
+            <span></span>
+        </div>
+    </body>
+</html>

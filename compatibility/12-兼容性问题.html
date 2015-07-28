@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .box {
+                float: left;
+                width: 640px;
+                overflow: hidden;
+                display: inline;
+                border: 10px solid #000;
+            }
+            .box div {
+                width: 100px;
+                height: 100px;
+                background: red;
+                margin: 20px;
+                float: left;
+                border: 5px solid #ccc;
+            }
+            /*
+                当一行子元素占有宽度之和和父级的宽度相差超过3像素
+                或者不满整行，在IE6下最后一行子元素的下margin就会失效
+                无解决方法
+            */
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </body>
+</html>

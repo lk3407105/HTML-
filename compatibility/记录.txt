@@ -1,0 +1,87 @@
+
+
+
+1、计算一定要精确 不要让内容的宽高超出我们设置的宽高
+   在IE6下，内容会撑开设置好的宽高
+2、用内容撑高父级元素
+    在IE6元素浮动，如果宽度需要内容撑开，就给里面的块元素都加浮动
+3、在IE6,7下元素要通过浮动并在一行，就给这行元素都加上浮动
+    否则可能出现3像素的问题
+4、标签嵌套问题
+    注意标签嵌套规范
+
+========================================================
+兼容性问题
+1、IE6下最小高度问题
+    在IE6下元素高度的小于19的时候默认为19
+    解决方法： overflow： hidden
+2、1px dotted 在IE6下不支持
+    解决方法： 且背景平铺
+3、IE6下没有新型的设备
+    在IE6下解决margin传递的值
+    解决方法： 触发父级的haslayout
+4、IE6下块级元素浮动之后margin横向值会出现双边距的问题
+    解决方法：display: inline
+    margin-right:  一行右侧第一个元素有双边距
+    margin-left: 一行左侧第一个元素有双边距
+5、在IE6，7下，li本身没浮动，但是li内容有浮动 li就会产生一个空隙
+    解决方法：
+        1、给li加浮动 添加宽度
+        2、给li加垂直的对齐方式vertical-align: top;
+         当IE6下最小高度问题和li空隙问题同时存在的时候  给li加浮动
+6、tbody 和 tr 都加样式的时候tbody中的样式会消失在IE6下面
+
+在IE 6，7下输入类型的表单控件上下各有1px 间隙
+                解决方法： input 加浮动
+            
+                 在IE 6，7下输入类型的表单控件 加border: none 无效
+                 解决方法： border: none;background: #fff;
+                    1、给input重设背景
+                    2、border: 0;
+            
+                在IE 6，7下输入类型的表单控 添加背景图片之后、
+                输入文字图片会跑
+                解决方法： 把背景加给父级
+IE6  png 半透明图片失效
+<!--[if IE 6]>
+
+
+<![endif]-->
+
+
+css hack
+
+background: blue\9;    \9     IE10之前的IE浏览器解析
+*background: yellow;    *,+   IE7 包括IE7之前的浏览器
+                        _     IE6包括IE6之前的浏览器
+
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    
+}
+
+!important  提高元素的样式的优先级
+
+在IE6下在important 后面加一条同样的样式，会破坏掉important的作用，会按照默认的级别显示
+
+
+data uri
+
+
+强制不换行：  white-space: nowrap
+             text-overflow: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .box {width: 100px;height: 100px;
+            border: 1px solid #cdcdcd;
+            background: red;
+            padding: 50px;}
+            .div {
+                height: 50px;background: yellow;
+            }
+            
+            /*
+                可视宽： 元素的内容宽+padding+border
+                元素的内容宽： 元素里可以放内容的宽度
+            
+                怪异模式：
+                    可视宽 ---》设置宽度
+                    内容宽  --》 设置宽 - padding - border
+            
+                IE下不设置文档生命的时候 页面的盒模型解析就会进入怪异模式
+            
+            
+                标准浏览器下面可以使用：
+                box-sizing: border-box;  怪异模式
+                box-sizing: content-box  正常模式
+            */
+        </style>
+    </head>
+    <body>
+        
+        <div class="box">
+            <div class="div"></div>
+        </div>
+    </body>
+</html>

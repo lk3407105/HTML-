@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <style>
+            .box {width: 200px;height: 32px;border: 1px solid #ccc;background: yello;}
+            input {width: 100px;height: 30px;border: none;margin: 0;padding: 0;}
+            
+            /*
+                在IE 6，7下输入类型的表单控件上下各有1px 间隙
+                解决方法： input 加浮动
+            
+                 在IE 6，7下输入类型的表单控件 加border: none 无效
+                 解决方法： border: none;background: #fff;
+                    1、给input重设背景
+                    2、border: 0;
+            
+                在IE 6，7下输入类型的表单控 添加背景图片之后、
+                输入文字图片会跑
+                解决方法： 把背景加给父级
+            */
+        </style>
+    
+    </head>
+    <body>
+        <div class="box">
+            <input type="text" >
+        </div>
+    </body>
+</html>

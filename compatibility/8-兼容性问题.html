@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /*
+                IE6下的双边距BUG
+                在IE6 ，块元素有浮动和横向的margin值会被放大成两倍
+            
+                解决方法： dislpay: inline
+            */
+            body {margin: 0;padding: 0;}
+            .box {
+                 width: 100px;
+                 height: 100px;
+                 background: red;
+                 float: left;
+                 margin-left: 10px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>
